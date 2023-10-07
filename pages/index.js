@@ -29,9 +29,9 @@ function Home() {
     >
       <h1>Welcome Home! Paul</h1>
       <Joke jokes={joke} btnText={btnText} />
-      {btnText === 'Get A Joke' || btnText === 'Get A New Joke' ? (
-        <Button type="button" onClick={getAJoke}>{btnText}</Button>
-      ) : (<Button onClick={() => setBtnText('Get a New Joke')}>{btnText}</Button>)}
+      {btnText === 'Get A Joke' || btnText === 'Get A New Joke'
+        ? (<Button type="button" onClick={getAJoke}>{btnText}</Button>)
+        : (<Button onClick={() => setBtnText('Get a New Joke')}>{btnText}</Button>)} {/* Need to add a comment */}
     </div>
   );
 }
